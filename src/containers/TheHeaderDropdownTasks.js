@@ -9,7 +9,7 @@ import {
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
 
-const TheHeaderDropdownTasks = () => {
+const TheHeaderDropdownNotif = () => {
   const itemsCount = 5
   return (
     <CDropdown
@@ -17,8 +17,8 @@ const TheHeaderDropdownTasks = () => {
       className="c-header-nav-item mx-2"
     >
       <CDropdownToggle className="c-header-nav-link" caret={false}>
-        <CIcon name="cil-list" />
-        <CBadge shape="pill" color="warning">{itemsCount}</CBadge>
+        <CIcon name="cil-bell" />
+        <CBadge shape="pill" color="danger">{itemsCount}</CBadge>
       </CDropdownToggle>
       <CDropdownMenu placement="bottom-end" className="pt-0">
         <CDropdownItem
@@ -27,33 +27,44 @@ const TheHeaderDropdownTasks = () => {
           className="text-center"
           color="light"
         >
-          <strong>You have {itemsCount} pending tasks</strong>
+          <strong>You have {itemsCount} notifications</strong>
+        </CDropdownItem>
+        <CDropdownItem><CIcon name="cil-user-follow" className="mr-2 text-success" /> New user registered</CDropdownItem>
+        <CDropdownItem><CIcon name="cil-user-unfollow" className="mr-2 text-danger" /> User deleted</CDropdownItem>
+        <CDropdownItem><CIcon name="cil-chart-pie" className="mr-2 text-info" /> Sales report is ready</CDropdownItem>
+        <CDropdownItem><CIcon name="cil-basket" className="mr-2 text-primary" /> New client</CDropdownItem>
+        <CDropdownItem><CIcon name="cil-speedometer" className="mr-2 text-warning" /> Server overloaded</CDropdownItem>
+        <CDropdownItem
+          header
+          tag="div"
+          color="light"
+        >
+          <strong>Server</strong>
         </CDropdownItem>
         <CDropdownItem className="d-block">
-          <div className="small mb-1">Upgrade NPM &amp; Bower <span
-            className="float-right"><strong>0%</strong></span></div>
-          <CProgress size="xs" color="info" value={0} />
+          <div className="text-uppercase mb-1">
+            <small><b>CPU Usage</b></small>
+          </div>
+          <CProgress size="xs" color="info" value={25} />
+          <small className="text-muted">348 Processes. 1/4 Cores.</small>
         </CDropdownItem>
         <CDropdownItem className="d-block">
-          <div className="small mb-1">ReactJS Version <span className="float-right"><strong>25%</strong></span></div>
-          <CProgress size="xs" color="danger" value={25} />
+          <div className="text-uppercase mb-1">
+            <small><b>Memory Usage</b></small>
+          </div>
+          <CProgress size="xs" color="warning" value={70} />
+          <small className="text-muted">11444GB/16384MB</small>
         </CDropdownItem>
         <CDropdownItem className="d-block">
-          <div className="small mb-1">VueJS Version <span className="float-right"><strong>50%</strong></span></div>
-          <CProgress size="xs" color="warning" value={50} />
+          <div className="text-uppercase mb-1">
+            <small><b>SSD 1 Usage</b></small>
+          </div>
+          <CProgress size="xs" color="danger" value={90} />
+          <small className="text-muted">243GB/256GB</small>
         </CDropdownItem>
-        <CDropdownItem className="d-block">
-          <div className="small mb-1">Add new layouts <span className="float-right"><strong>75%</strong></span></div>
-          <CProgress size="xs" color="info" value={75} />
-        </CDropdownItem>
-        <CDropdownItem className="d-block">
-          <div className="small mb-1">Angular 2 Cli Version <span className="float-right"><strong>100%</strong></span></div>
-          <CProgress size="xs" color="success" value={100} />
-        </CDropdownItem>
-        <CDropdownItem className="text-center border-top"><strong>View all tasks</strong></CDropdownItem>
       </CDropdownMenu>
     </CDropdown>
   )
 }
 
-export default TheHeaderDropdownTasks
+export default TheHeaderDropdownNotif
