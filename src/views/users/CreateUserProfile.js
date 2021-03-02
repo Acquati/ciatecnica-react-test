@@ -49,70 +49,20 @@ const CreateUserProfile = () => {
                 </CCol>
               </CRow>
               <CRow>
-                <CCol xs="12">
-                  <CFormGroup>
-                    <CLabel htmlFor="email">E-mail Adress*</CLabel>
-                    <CInput type="email" id="email" placeholder="E-mail Adress" required />
-                  </CFormGroup>
-                </CCol>
-              </CRow>
-              <CRow>
                 <CCol xs="6">
-                  <CFormGroup>
-                    <CLabel htmlFor="phoneNumber">Phone Number</CLabel>
-                    <CInput id="phoneNumber" pattern="\(\d{3}\)\d{3}-\d{4}" placeholder="(000) 000-0000" />
-                  </CFormGroup>
+                  <CLabel htmlFor="profile">Profile</CLabel>
+                  <CSelect custom name="profile" id="profile">
+                    <option value="ActOffice Supportive">Office Support</option>
+                    <option value="Business Contact">Business Contact</option>
+                    <option value="Driver">Driver</option>
+                  </CSelect>
                 </CCol>
                 <CCol xs="6">
-                  <CFormGroup>
-                    <CLabel htmlFor="mobileNumber">Mobile Number*</CLabel>
-                    <CInput id="lastName" pattern="\(\d{3}\)\d{3}-\d{4}" placeholder="(000) 000-0000" required />
-                  </CFormGroup>
-                </CCol>
-              </CRow>
-              <CRow>
-                <CCol xs="12">
-                  <CFormGroup>
-                    <CLabel htmlFor="password">Password</CLabel>
-                    <CInput id="password" required />
-                  </CFormGroup>
-                </CCol>
-              </CRow>
-              <CRow>
-                <CCol xs="12">
-                  <CFormGroup>
-                    <CLabel htmlFor="confirm-assword">Confirm Password</CLabel>
-                    <CInput id="confirm-password" required />
-                  </CFormGroup>
-                </CCol>
-              </CRow>
-              <CRow>
-                <CCol xs="6" className="mb-3">
-                  <CFormGroup>
-                    <CLabel htmlFor="expire">Expire</CLabel>
-                  </CFormGroup>
-                  <CFormGroup variant="custom-radio" inline>
-                    <CInputRadio custom id="expireYes" name="expireYes" value={false} checked />
-                    <CLabel variant="custom-checkbox" htmlFor="expireYes">Yes</CLabel>
-                  </CFormGroup>
-                  <CFormGroup variant="custom-radio" inline>
-                    <CInputRadio custom id="expireNever" name="expireNever" value={true} />
-                    <CLabel variant="custom-checkbox" htmlFor="expireNever">Never</CLabel>
-                  </CFormGroup>
-                </CCol>
-                <CCol xs="2">
-                  <CFormGroup>
-                    <CLabel htmlFor="expireDate">Expire Date</CLabel>
-                    <CInput id="expireDate" placeholder="   /   /   " required />
-                  </CFormGroup>
-                </CCol>
-              </CRow>
-              <CRow>
-                <CCol xs="6">
-                  <CLabel htmlFor="status">Status</CLabel>
-                  <CSelect custom name="status" id="status">
-                    <option value="Active">Active</option>
-                    <option value="Inactive">Inactive</option>
+                  <CLabel htmlFor="company">Company</CLabel>
+                  <CSelect custom name="company" id="company">
+                    <option value="Company 1">Company 1</option>
+                    <option value="Company 2">Company 2</option>
+                    <option value="Company 3">Company 3</option>
                   </CSelect>
                 </CCol>
               </CRow>
