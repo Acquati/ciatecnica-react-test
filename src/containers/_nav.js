@@ -8,6 +8,12 @@ const _nav = [
     name: 'Users List',
     to: '/users',
     icon: 'cil-user',
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Create User',
+    to: '/create-user',
+    icon: 'cil-user-follow',
   }
 ]
 
