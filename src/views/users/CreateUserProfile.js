@@ -6,7 +6,6 @@ import {
   CCol,
   CFormGroup,
   CInput,
-  CInputRadio,
   CLabel,
   CSelect,
   CRow,

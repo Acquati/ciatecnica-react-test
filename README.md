@@ -15,9 +15,12 @@
 [npm-next]: https://img.shields.io/npm/v/@coreui/react/next.png?style=flat-square
 [npm]: https://www.npmjs.com/package/@coreui/react
 
-# CoreUI Free React Admin Template v3
+# Ciatécnica React Test
 
-CoreUI is meant to be the UX game changer. Pure & transparent code is devoid of redundant components, so the app is light enough to offer ultimate user experience. This means mobile devices also, where the navigation is just as easy and intuitive as on a desktop or laptop. The CoreUI Layout API lets you customize your project for almost any device – be it Mobile, Web or WebApp – CoreUI covers them all!
+- User Registry Functionality
+- Core Ui Template
+- Admin Area
+- React Js
 
 ## Table of Contents
 
@@ -62,18 +65,15 @@ Run `build` to build the project. The build artifacts will be stored in the `bui
 $ yarn run build
 ```
 
-## Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
-
-see also:
-[CRA docs](https://create-react-app.dev/docs/getting-started)
-
 Navigate to [http://localhost:3000](http://localhost:3000). The app will automatically reload if you change any of the source files.
+
+## Coreui Free React Admin Template
+
+This project was bootstrapped with [Coreui Free React Admin Template](https://github.com/coreui/coreui-free-react-admin-template).
 
 ## Documentation
 
-The documentation for the CoreUI Admin Template is hosted at our website [CoreUI for React](https://coreui.io/react/)
+The documentation for the CoreUI Admin Template is hosted at[CoreUI for React](https://coreui.io/react/)
 
 ## Copyright and License
 
