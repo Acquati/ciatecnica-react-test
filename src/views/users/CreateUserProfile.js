@@ -1,4 +1,3 @@
-import { useHistory } from 'react-router-dom'
 import React from 'react'
 import {
   CButton,
@@ -15,7 +14,7 @@ import {
   CNavLink
 } from '@coreui/react'
 
-const CreateUser = () => {
+const CreateUserProfile = () => {
   return (
     <>
       <CRow>
@@ -23,8 +22,8 @@ const CreateUser = () => {
           <CCard>
             <CCardBody>
               <CNav variant="tabs" className="mb-3">
-                <CNavLink active>User Registry</CNavLink>
-                <CNavLink to="/create-user-profile">Profile</CNavLink>
+                <CNavLink to="/create-user">User Registry</CNavLink>
+                <CNavLink active>Profile</CNavLink>
               </CNav>
               <CRow>
                 <CCol xs="6">
@@ -117,8 +116,8 @@ const CreateUser = () => {
                 </CCol>
               </CRow>
               <div className="form-actions mt-3">
-                <CButton className="mr-3" type="submit" color="primary" onClick={useHistory.push('/create-user-profile')}>Save changes</CButton>
-                <CButton color="secondary" onClick={useHistory.push('/create-user')}>Cancel</CButton>
+                <CButton className="mr-3" type="submit" color="primary">Save changes</CButton>
+                <CButton color="secondary">Cancel</CButton>
               </div>
             </CCardBody>
           </CCard>
@@ -128,4 +127,4 @@ const CreateUser = () => {
   )
 }
 
-export default CreateUser
+export default CreateUserProfile
