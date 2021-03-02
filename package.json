@@ -1,26 +1,18 @@
 {
-  "name": "@coreui/coreui-free-react-admin-template",
-  "version": "3.2.0",
-  "description": "CoreUI React Open Source Bootstrap 4 Admin Template",
+  "name": "ciatecnica-react-test",
+  "version": "1.0.0",
+  "description": "Ciatecnica React Test",
   "author": {
-    "name": "CoreUI",
-    "url": "https://coreui.io",
-    "github": "https://github.com/coreui",
-    "twitter": "https://twitter.com/core_ui"
+    "name": "Leandro Acquati",
+    "github": "https://github.com/Acquati/ciatecnica-react-test"
   },
-  "contributors": [
-    {
-      "name": "CoreUI Team",
-      "url": "https://github.com/orgs/coreui/people"
-    }
-  ],
   "homepage": ".",
   "copyright": "Copyright 2017-2020 creativeLabs Łukasz Holeczek",
   "license": "MIT",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git@github.com:coreui/coreui-free-react-admin-template.git"
+    "url": "git@github.com:Acquati/ciatecnica-react-test.git"
   },
   "dependencies": {
     "@coreui/chartjs": "^2.0.0",
