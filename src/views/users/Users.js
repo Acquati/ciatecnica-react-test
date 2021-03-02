@@ -8,8 +8,10 @@ import {
   CCol,
   CDataTable,
   CRow,
-  CPagination
+  CPagination,
+  CButton
 } from '@coreui/react'
+import CIcon from '@coreui/icons-react'
 
 import usersData from './UsersData'
 
@@ -17,8 +19,6 @@ const getBadge = status => {
   switch (status) {
     case 'Active': return 'success'
     case 'Inactive': return 'secondary'
-    case 'Pending': return 'warning'
-    case 'Banned': return 'danger'
     default: return 'primary'
   }
 }
@@ -43,39 +43,50 @@ const Users = () => {
         <CCard>
           <CCardHeader>
             Users
-            <small className="text-muted"> example</small>
           </CCardHeader>
           <CCardBody>
-          <CDataTable
-            items={usersData}
-            fields={[
-              { key: 'name', _classes: 'font-weight-bold' },
-              'registered', 'role', 'status'
-            ]}
-            hover
-            striped
-            itemsPerPage={5}
-            activePage={page}
-            clickableRows
-            onRowClick={(item) => history.push(`/users/${item.id}`)}
-            scopedSlots = {{
-              'status':
-                (item)=>(
-                  <td>
-                    <CBadge color={getBadge(item.status)}>
-                      {item.status}
-                    </CBadge>
-                  </td>
-                )
-            }}
-          />
-          <CPagination
-            activePage={page}
-            onActivePageChange={pageChange}
-            pages={5}
-            doubleArrows={false} 
-            align="center"
-          />
+            <CDataTable
+              items={usersData}
+              fields={[
+                'name', 'username', 'profile', 'status', 'actions'
+              ]}
+              hover
+              striped
+              itemsPerPage={10}
+              activePage={page}
+              clickableRows
+              onRowClick={(item) => history.push(`/users/${item.id}`)}
+              scopedSlots={{
+                'name':
+                  (item) => (
+                    <td>
+                      {item.firstName + ' ' + item.lastName}
+                    </td>
+                  ),
+                'status':
+                  (item) => (
+                    <td>
+                      <CBadge color={getBadge(item.status)}>
+                        {item.status}
+                      </CBadge>
+                    </td>
+                  ),
+                'actions':
+                  () => (
+                    <td>
+                      <CButton shape="pill" color="light" className="mr-2" ><CIcon name="cilPencil" size="sm" /></CButton>
+                      <CButton shape="pill" color="light"><CIcon name="cilBan" size="sm" /></CButton>
+                    </td>
+                  )
+              }}
+            />
+            <CPagination
+              activePage={page}
+              onActivePageChange={pageChange}
+              pages={5}
+              doubleArrows={false}
+              align="center"
+            />
           </CCardBody>
         </CCard>
       </CCol>
