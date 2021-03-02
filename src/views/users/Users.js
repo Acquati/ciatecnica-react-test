@@ -10,7 +10,8 @@ import {
   CRow,
   CPagination,
   CButton,
-  CSelect
+  CSelect,
+  CLink
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
 
@@ -114,7 +115,7 @@ const Users = () => {
                 'actions':
                   () => (
                     <td>
-                      <CButton shape="pill" color="light" className="mr-2"><CIcon name="cilPencil" size="sm" /></CButton>
+                      <CLink style={{ color: '#3c4b64', textDecoration: 'none' }} to="/create-user"><CButton shape="pill" color="light" className="mr-2"><CIcon name="cilPencil" size="sm" /></CButton></CLink>
                       <CButton shape="pill" color="light"><CIcon name="cilBan" size="sm" /></CButton>
                     </td>
                   )
