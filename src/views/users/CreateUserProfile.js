@@ -11,7 +11,8 @@ import {
   CSelect,
   CRow,
   CNav,
-  CNavLink
+  CNavLink,
+  CLink
 } from '@coreui/react'
 
 const CreateUserProfile = () => {
@@ -116,8 +117,8 @@ const CreateUserProfile = () => {
                 </CCol>
               </CRow>
               <div className="form-actions mt-3">
-                <CButton className="mr-3" type="submit" color="primary">Save changes</CButton>
-                <CButton color="secondary">Cancel</CButton>
+                <CButton className="mr-3" type="submit" color="primary"><CLink style={{ color: 'white', textDecoration: 'none' }} to="/users">Save changes</CLink></CButton>
+                <CButton color="secondary"><CLink style={{ color: '#3c4b64', textDecoration: 'none' }} to="/create-user-profile">Cancel</CLink></CButton>
               </div>
             </CCardBody>
           </CCard>
